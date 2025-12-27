@@ -81,14 +81,14 @@
             // mstCreateCity
             // 
             mstCreateCity.Name = "mstCreateCity";
-            mstCreateCity.Size = new Size(180, 22);
+            mstCreateCity.Size = new Size(138, 22);
             mstCreateCity.Text = "Şehir Tanımı";
             mstCreateCity.Click += mstCreateCity_Click;
             // 
             // mstCreateCounty
             // 
             mstCreateCounty.Name = "mstCreateCounty";
-            mstCreateCounty.Size = new Size(180, 22);
+            mstCreateCounty.Size = new Size(138, 22);
             mstCreateCounty.Text = "İlçe Tanımı";
             mstCreateCounty.Click += mstCreateCounty_Click;
             // 
@@ -102,14 +102,14 @@
             // mstSetCapacity
             // 
             mstSetCapacity.Name = "mstSetCapacity";
-            mstSetCapacity.Size = new Size(180, 22);
+            mstSetCapacity.Size = new Size(165, 22);
             mstSetCapacity.Text = "Kapasite Bildirimi";
             mstSetCapacity.Click += mstSetCapacity_Click;
             // 
             // mstSetPopulation
             // 
             mstSetPopulation.Name = "mstSetPopulation";
-            mstSetPopulation.Size = new Size(180, 22);
+            mstSetPopulation.Size = new Size(165, 22);
             mstSetPopulation.Text = "Nüfus Bildirimi";
             mstSetPopulation.Click += mstSetPopulation_Click;
             // 

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Vektorel.Data.Concretes;
 
 namespace Vektorel.OOPSample
 {
@@ -15,6 +7,18 @@ namespace Vektorel.OOPSample
         public FrmCreateCity()
         {
             InitializeComponent();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            erpNotify.Clear();
+            if (string.IsNullOrEmpty(txtCity.Text))
+            {
+                erpNotify.SetError(txtCity, "Şehir boş geçilemez");
+                return;
+            }
+            var c = new City();
+            c.Name = txtCity.Text;
         }
     }
 }
