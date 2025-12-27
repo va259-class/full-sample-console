@@ -41,6 +41,11 @@ namespace Vektorel.OOPSample
             OpenForm<FrmSetPopulation>();
         }
 
+        private void mstDataAnalysis_Click(object sender, EventArgs e)
+        {
+            OpenForm<FrmDataAnalysis>();
+        }
+
         private void OpenForm<T>() where T : Form
         {
             var f = Activator.CreateInstance<T>(); // var f =  new T();

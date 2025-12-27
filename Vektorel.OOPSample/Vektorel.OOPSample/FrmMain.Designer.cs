@@ -38,6 +38,8 @@
             veriToolStripMenuItem = new ToolStripMenuItem();
             mstSetCapacity = new ToolStripMenuItem();
             mstSetPopulation = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            mstDataAnalysis = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,7 +75,7 @@
             // 
             // tanımlarToolStripMenuItem
             // 
-            tanımlarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mstCreateCity, mstCreateCounty });
+            tanımlarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mstCreateCity, mstCreateCounty, toolStripSeparator1, mstDataAnalysis });
             tanımlarToolStripMenuItem.Name = "tanımlarToolStripMenuItem";
             tanımlarToolStripMenuItem.Size = new Size(64, 20);
             tanımlarToolStripMenuItem.Text = "Tanımlar";
@@ -81,14 +83,14 @@
             // mstCreateCity
             // 
             mstCreateCity.Name = "mstCreateCity";
-            mstCreateCity.Size = new Size(138, 22);
+            mstCreateCity.Size = new Size(180, 22);
             mstCreateCity.Text = "Şehir Tanımı";
             mstCreateCity.Click += mstCreateCity_Click;
             // 
             // mstCreateCounty
             // 
             mstCreateCounty.Name = "mstCreateCounty";
-            mstCreateCounty.Size = new Size(138, 22);
+            mstCreateCounty.Size = new Size(180, 22);
             mstCreateCounty.Text = "İlçe Tanımı";
             mstCreateCounty.Click += mstCreateCounty_Click;
             // 
@@ -112,6 +114,18 @@
             mstSetPopulation.Size = new Size(165, 22);
             mstSetPopulation.Text = "Nüfus Bildirimi";
             mstSetPopulation.Click += mstSetPopulation_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(177, 6);
+            // 
+            // mstDataAnalysis
+            // 
+            mstDataAnalysis.Name = "mstDataAnalysis";
+            mstDataAnalysis.Size = new Size(180, 22);
+            mstDataAnalysis.Text = "Veri Analizi";
+            mstDataAnalysis.Click += mstDataAnalysis_Click;
             // 
             // FrmMain
             // 
@@ -141,5 +155,7 @@
         private ToolStripMenuItem veriToolStripMenuItem;
         private ToolStripMenuItem mstSetCapacity;
         private ToolStripMenuItem mstSetPopulation;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem mstDataAnalysis;
     }
 }

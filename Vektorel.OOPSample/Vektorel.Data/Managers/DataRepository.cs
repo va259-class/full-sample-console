@@ -8,8 +8,12 @@ using Vektorel.Data.Concretes;
 
 namespace Vektorel.Data.Managers
 {
-    public class DataRepository
+    public static class DataRepository
     {
-        public BindingList<City> Cities {  get; set; }
+        static DataRepository()
+        {
+            Cities = new BindingList<City>();
+        }
+        public static BindingList<City> Cities {  get; }
     }
 }

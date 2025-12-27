@@ -1,4 +1,5 @@
 ﻿using Vektorel.Data.Concretes;
+using Vektorel.Data.Managers;
 
 namespace Vektorel.OOPSample
 {
@@ -19,6 +20,8 @@ namespace Vektorel.OOPSample
             }
             var c = new City();
             c.Name = txtCity.Text;
+
+            DataRepository.Cities.Add(c);
         }
     }
 }
