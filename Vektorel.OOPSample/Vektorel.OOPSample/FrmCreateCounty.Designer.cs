@@ -30,7 +30,7 @@
         {
             txtCounty = new TextBox();
             label1 = new Label();
-            button1 = new Button();
+            btnCreate = new Button();
             cmbCities = new ComboBox();
             label2 = new Label();
             SuspendLayout();
@@ -51,14 +51,15 @@
             label1.TabIndex = 4;
             label1.Text = "Şehir";
             // 
-            // button1
+            // btnCreate
             // 
-            button1.Location = new Point(129, 100);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 3;
-            button1.Text = "Ekle";
-            button1.UseVisualStyleBackColor = true;
+            btnCreate.Location = new Point(129, 100);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(75, 23);
+            btnCreate.TabIndex = 3;
+            btnCreate.Text = "Ekle";
+            btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.Click += btnCreate_Click;
             // 
             // cmbCities
             // 
@@ -87,11 +88,12 @@
             Controls.Add(cmbCities);
             Controls.Add(txtCounty);
             Controls.Add(label1);
-            Controls.Add(button1);
+            Controls.Add(btnCreate);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FrmCreateCounty";
             Text = "İlçe Tanımı";
+            Load += FrmCreateCounty_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -100,7 +102,7 @@
 
         private TextBox txtCounty;
         private Label label1;
-        private Button button1;
+        private Button btnCreate;
         private ComboBox cmbCities;
         private Label label2;
     }

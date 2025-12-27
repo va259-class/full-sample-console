@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             lstCities = new ListBox();
             label1 = new Label();
             label2 = new Label();
@@ -63,7 +63,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(149, 12);
+            label1.Location = new Point(152, 16);
             label1.Name = "label1";
             label1.Size = new Size(33, 15);
             label1.TabIndex = 1;
@@ -72,7 +72,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(149, 42);
+            label2.Location = new Point(356, 16);
             label2.Name = "label2";
             label2.Size = new Size(39, 15);
             label2.TabIndex = 2;
@@ -80,26 +80,26 @@
             // 
             // txtCityName
             // 
-            txtCityName.Location = new Point(197, 9);
+            txtCityName.Location = new Point(200, 12);
             txtCityName.Name = "txtCityName";
             txtCityName.ReadOnly = true;
-            txtCityName.Size = new Size(248, 23);
+            txtCityName.Size = new Size(140, 23);
             txtCityName.TabIndex = 3;
             // 
             // txtPopulation
             // 
-            txtPopulation.Location = new Point(197, 38);
+            txtPopulation.Location = new Point(404, 12);
             txtPopulation.Name = "txtPopulation";
             txtPopulation.ReadOnly = true;
-            txtPopulation.Size = new Size(248, 23);
+            txtPopulation.Size = new Size(140, 23);
             txtPopulation.TabIndex = 4;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(tabControl1);
-            groupBox1.Location = new Point(149, 67);
+            groupBox1.Location = new Point(149, 41);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(296, 279);
+            groupBox1.Size = new Size(463, 305);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = "İlçe Bilgileri";
@@ -111,7 +111,7 @@
             tabControl1.Location = new Point(6, 22);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(284, 251);
+            tabControl1.Size = new Size(451, 277);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -120,7 +120,7 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(276, 223);
+            tabPage1.Size = new Size(443, 249);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Genel Bilgiler";
             tabPage1.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@
             dgvCounties.Name = "dgvCounties";
             dgvCounties.ReadOnly = true;
             dgvCounties.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCounties.Size = new Size(264, 211);
+            dgvCounties.Size = new Size(431, 237);
             dgvCounties.TabIndex = 0;
             // 
             // tabPage2
@@ -146,24 +146,24 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(276, 223);
+            tabPage2.Size = new Size(443, 249);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Grafik";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            chart1.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart1.Legends.Add(legend1);
             chart1.Location = new Point(6, 6);
             chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            chart1.Series.Add(series3);
-            chart1.Size = new Size(264, 211);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart1.Series.Add(series1);
+            chart1.Size = new Size(431, 237);
             chart1.TabIndex = 0;
             chart1.Text = "chart1";
             // 
@@ -171,7 +171,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(457, 355);
+            ClientSize = new Size(624, 355);
             Controls.Add(groupBox1);
             Controls.Add(txtPopulation);
             Controls.Add(txtCityName);

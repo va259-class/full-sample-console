@@ -29,5 +29,10 @@
                 return Counties.Sum(s => s.Population);
             }
         }
+
+        public List<County> GetCounties()
+        {
+            return Counties.ToList();
+        }
     }
 }

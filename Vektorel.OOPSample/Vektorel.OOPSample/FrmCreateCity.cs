@@ -18,10 +18,23 @@ namespace Vektorel.OOPSample
                 erpNotify.SetError(txtCity, "Şehir boş geçilemez");
                 return;
             }
-            var c = new City();
-            c.Name = txtCity.Text;
+            var success = DataRepository.AddCity(txtCity.Text);
+            if (success)
+            {
+                txtCity.Clear();
+                txtCity.Focus();
+                return;
+            }
 
-            DataRepository.Cities.Add(c);
+            erpNotify.SetError(txtCity, "Şehir Eklenemedi");
+        }
+
+        private void txtCity_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnAdd_Click(null, null);
+            }
         }
     }
 }

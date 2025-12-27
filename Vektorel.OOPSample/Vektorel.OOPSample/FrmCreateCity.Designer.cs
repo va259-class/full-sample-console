@@ -61,6 +61,7 @@
             txtCity.Name = "txtCity";
             txtCity.Size = new Size(192, 23);
             txtCity.TabIndex = 2;
+            txtCity.KeyDown += txtCity_KeyDown;
             // 
             // erpNotify
             // 

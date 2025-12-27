@@ -32,7 +32,7 @@ namespace Vektorel.OOPSample
             txtPopulation.Text = selectedCity.Population.ToString();
 
             dgvCounties.DataSource = null;
-            dgvCounties.DataSource = selectedCity.Counties;
+            dgvCounties.DataSource = selectedCity.GetCounties();
         }
     }
 }
