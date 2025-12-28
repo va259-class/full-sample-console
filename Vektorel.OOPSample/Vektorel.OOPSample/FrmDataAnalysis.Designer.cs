@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -42,12 +43,18 @@
             dgvCounties = new DataGridView();
             tabPage2 = new TabPage();
             chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ctxGridRightClick = new ContextMenuStrip(components);
+            tsmCapacity = new ToolStripMenuItem();
+            tsmPopulation = new ToolStripMenuItem();
+            label3 = new Label();
+            txtCapacity = new TextBox();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCounties).BeginInit();
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
+            ctxGridRightClick.SuspendLayout();
             SuspendLayout();
             // 
             // lstCities
@@ -72,7 +79,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(356, 16);
+            label2.Location = new Point(294, 16);
             label2.Name = "label2";
             label2.Size = new Size(39, 15);
             label2.TabIndex = 2;
@@ -83,15 +90,15 @@
             txtCityName.Location = new Point(200, 12);
             txtCityName.Name = "txtCityName";
             txtCityName.ReadOnly = true;
-            txtCityName.Size = new Size(140, 23);
+            txtCityName.Size = new Size(88, 23);
             txtCityName.TabIndex = 3;
             // 
             // txtPopulation
             // 
-            txtPopulation.Location = new Point(404, 12);
+            txtPopulation.Location = new Point(339, 13);
             txtPopulation.Name = "txtPopulation";
             txtPopulation.ReadOnly = true;
-            txtPopulation.Size = new Size(140, 23);
+            txtPopulation.Size = new Size(88, 23);
             txtPopulation.TabIndex = 4;
             // 
             // groupBox1
@@ -140,7 +147,8 @@
             dgvCounties.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCounties.Size = new Size(431, 237);
             dgvCounties.TabIndex = 0;
-            dgvCounties.CellContentDoubleClick += dgvCounties_CellContentDoubleClick;
+            dgvCounties.CellMouseDown += dgvCounties_CellMouseDown;
+            dgvCounties.MouseDown += dgvCounties_MouseDown;
             // 
             // tabPage2
             // 
@@ -169,11 +177,50 @@
             chart1.TabIndex = 0;
             chart1.Text = "chart1";
             // 
+            // ctxGridRightClick
+            // 
+            ctxGridRightClick.Items.AddRange(new ToolStripItem[] { tsmCapacity, tsmPopulation });
+            ctxGridRightClick.Name = "ctxGridRightClick";
+            ctxGridRightClick.Size = new Size(172, 48);
+            // 
+            // tsmCapacity
+            // 
+            tsmCapacity.Name = "tsmCapacity";
+            tsmCapacity.Size = new Size(171, 22);
+            tsmCapacity.Text = "Su Kapasitesi Girişi";
+            tsmCapacity.Click += tsmCapacity_Click;
+            // 
+            // tsmPopulation
+            // 
+            tsmPopulation.Name = "tsmPopulation";
+            tsmPopulation.Size = new Size(171, 22);
+            tsmPopulation.Text = "Nüfus Bildirimi";
+            tsmPopulation.Click += tsmPopulation_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(433, 16);
+            label3.Name = "label3";
+            label3.Size = new Size(51, 15);
+            label3.TabIndex = 6;
+            label3.Text = "Kapasite";
+            // 
+            // txtCapacity
+            // 
+            txtCapacity.Location = new Point(490, 12);
+            txtCapacity.Name = "txtCapacity";
+            txtCapacity.ReadOnly = true;
+            txtCapacity.Size = new Size(88, 23);
+            txtCapacity.TabIndex = 7;
+            // 
             // FrmDataAnalysis
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(624, 355);
+            Controls.Add(txtCapacity);
+            Controls.Add(label3);
             Controls.Add(groupBox1);
             Controls.Add(txtPopulation);
             Controls.Add(txtCityName);
@@ -191,6 +238,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvCounties).EndInit();
             tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
+            ctxGridRightClick.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -208,5 +256,10 @@
         private DataGridView dgvCounties;
         private TabPage tabPage2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private ContextMenuStrip ctxGridRightClick;
+        private ToolStripMenuItem tsmCapacity;
+        private ToolStripMenuItem tsmPopulation;
+        private Label label3;
+        private TextBox txtCapacity;
     }
 }

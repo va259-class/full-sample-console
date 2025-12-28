@@ -1,3 +1,5 @@
+using Vektorel.Data.Managers;
+
 namespace Vektorel.OOPSample
 {
     public partial class FrmMain : Form
@@ -5,6 +7,11 @@ namespace Vektorel.OOPSample
         public FrmMain()
         {
             InitializeComponent();
+
+            DataRepository.AddCity("Ankara");
+            DataRepository.AddCity("Bursa");
+            DataRepository.AddCity("Sivas");
+            DataRepository.AddCity("Nevþehir");
         }
 
         private void mstAbout_Click(object sender, EventArgs e)

@@ -29,6 +29,8 @@
                 return Counties.Sum(s => s.Population);
             }
         }
+        //üstteki yazım ile aynı amaç
+        public double Capacity => Counties.Sum(c => c.Capacity);
 
         public List<County> GetCounties()
         {

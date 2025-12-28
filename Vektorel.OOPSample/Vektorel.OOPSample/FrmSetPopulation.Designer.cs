@@ -100,6 +100,7 @@
             btnNotify.TabIndex = 6;
             btnNotify.Text = "Bildirim Yap";
             btnNotify.UseVisualStyleBackColor = true;
+            btnNotify.Click += btnNotify_Click;
             // 
             // FrmSetPopulation
             // 

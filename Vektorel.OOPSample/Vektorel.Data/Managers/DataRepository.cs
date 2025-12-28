@@ -8,6 +8,7 @@ using Vektorel.Data.Concretes;
 
 namespace Vektorel.Data.Managers
 {
+    public delegate void CountyUpdated(City city);
     public static class DataRepository
     {
         static DataRepository()
@@ -15,12 +16,14 @@ namespace Vektorel.Data.Managers
             Cities = new BindingList<City>();
         }
 
+        public static event CountyUpdated OnCountyUpdated;
+
         public static bool AddCity(string name)
         {
             var existing = Cities.FirstOrDefault(c => string.Equals(c.Name, name, StringComparison.OrdinalIgnoreCase));
             if (existing is not null)
             {
-                return false;                
+                return false;
             }
 
             var c = new City();
@@ -36,7 +39,37 @@ namespace Vektorel.Data.Managers
             var county = new County();
             county.Name = name;
             city.Counties.Add(county);
+            OnCountyUpdated?.Invoke(city);
         }
-        public static BindingList<City> Cities {  get; }
+
+        public static void UpdateCountyCapacity(City city, County county, double capacity)
+        {
+            var exactCounty = city.Counties.FirstOrDefault(c => c.Id == county.Id);
+            if (exactCounty is null)
+            {
+                return;
+            }
+
+            exactCounty.Capacity = capacity;
+            if (OnCountyUpdated is not null)
+            {
+                OnCountyUpdated.Invoke(city);
+            }
+        }
+
+        public static void UpdateCountyPopulation(City city, County county, uint population)
+        {
+            var exactCounty = city.Counties.FirstOrDefault(c => c.Id == county.Id);
+            if (exactCounty is null)
+            {
+                return;
+            }
+
+            exactCounty.Population = population;
+
+            //yukarıdaki kullanım ile aynı
+            OnCountyUpdated?.Invoke(city);
+        }
+        public static BindingList<City> Cities { get; }
     }
 }
