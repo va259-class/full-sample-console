@@ -31,16 +31,6 @@ namespace Vektorel.OOPSample
             OpenForm<FrmCreateCounty>();
         }
 
-        private void mstSetCapacity_Click(object sender, EventArgs e)
-        {
-            OpenForm<FrmSetCapacity>();
-        }
-
-        private void mstSetPopulation_Click(object sender, EventArgs e)
-        {
-            OpenForm<FrmSetPopulation>();
-        }
-
         private void mstDataAnalysis_Click(object sender, EventArgs e)
         {
             OpenForm<FrmDataAnalysis>();

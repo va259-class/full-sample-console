@@ -35,9 +35,6 @@
             tanımlarToolStripMenuItem = new ToolStripMenuItem();
             mstCreateCity = new ToolStripMenuItem();
             mstCreateCounty = new ToolStripMenuItem();
-            veriToolStripMenuItem = new ToolStripMenuItem();
-            mstSetCapacity = new ToolStripMenuItem();
-            mstSetPopulation = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             mstDataAnalysis = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
@@ -45,7 +42,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { uygulamaToolStripMenuItem, tanımlarToolStripMenuItem, veriToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { uygulamaToolStripMenuItem, tanımlarToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(584, 24);
@@ -62,14 +59,14 @@
             // mstAbout
             // 
             mstAbout.Name = "mstAbout";
-            mstAbout.Size = new Size(124, 22);
+            mstAbout.Size = new Size(180, 22);
             mstAbout.Text = "Hakkında";
             mstAbout.Click += mstAbout_Click;
             // 
             // mstExit
             // 
             mstExit.Name = "mstExit";
-            mstExit.Size = new Size(124, 22);
+            mstExit.Size = new Size(180, 22);
             mstExit.Text = "Çıkış";
             mstExit.Click += mstExit_Click;
             // 
@@ -93,27 +90,6 @@
             mstCreateCounty.Size = new Size(180, 22);
             mstCreateCounty.Text = "İlçe Tanımı";
             mstCreateCounty.Click += mstCreateCounty_Click;
-            // 
-            // veriToolStripMenuItem
-            // 
-            veriToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mstSetCapacity, mstSetPopulation });
-            veriToolStripMenuItem.Name = "veriToolStripMenuItem";
-            veriToolStripMenuItem.Size = new Size(38, 20);
-            veriToolStripMenuItem.Text = "Veri";
-            // 
-            // mstSetCapacity
-            // 
-            mstSetCapacity.Name = "mstSetCapacity";
-            mstSetCapacity.Size = new Size(165, 22);
-            mstSetCapacity.Text = "Kapasite Bildirimi";
-            mstSetCapacity.Click += mstSetCapacity_Click;
-            // 
-            // mstSetPopulation
-            // 
-            mstSetPopulation.Name = "mstSetPopulation";
-            mstSetPopulation.Size = new Size(165, 22);
-            mstSetPopulation.Text = "Nüfus Bildirimi";
-            mstSetPopulation.Click += mstSetPopulation_Click;
             // 
             // toolStripSeparator1
             // 
@@ -152,9 +128,6 @@
         private ToolStripMenuItem tanımlarToolStripMenuItem;
         private ToolStripMenuItem mstCreateCity;
         private ToolStripMenuItem mstCreateCounty;
-        private ToolStripMenuItem veriToolStripMenuItem;
-        private ToolStripMenuItem mstSetCapacity;
-        private ToolStripMenuItem mstSetPopulation;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem mstDataAnalysis;
     }

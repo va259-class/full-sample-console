@@ -34,5 +34,15 @@ namespace Vektorel.OOPSample
             dgvCounties.DataSource = null;
             dgvCounties.DataSource = selectedCity.GetCounties();
         }
+
+        private void dgvCounties_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var city = lstCities.SelectedItem as City;
+            var county = dgvCounties.SelectedRows[0].DataBoundItem as County;
+
+            var f = new FrmSetCapacity(city, county);
+            f.MdiParent = this.MdiParent;
+            f.Show();
+        }
     }
 }

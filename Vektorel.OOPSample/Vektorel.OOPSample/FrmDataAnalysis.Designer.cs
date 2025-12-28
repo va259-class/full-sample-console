@@ -134,11 +134,13 @@
             dgvCounties.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCounties.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCounties.Location = new Point(6, 6);
+            dgvCounties.MultiSelect = false;
             dgvCounties.Name = "dgvCounties";
             dgvCounties.ReadOnly = true;
             dgvCounties.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCounties.Size = new Size(431, 237);
             dgvCounties.TabIndex = 0;
+            dgvCounties.CellContentDoubleClick += dgvCounties_CellContentDoubleClick;
             // 
             // tabPage2
             // 

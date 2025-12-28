@@ -1,20 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Vektorel.Data.Concretes;
 
 namespace Vektorel.OOPSample
 {
     public partial class FrmSetCapacity : Form
     {
-        public FrmSetCapacity()
+        private County county;
+        public FrmSetCapacity(City city, County county)
         {
             InitializeComponent();
+            txtCity.Text = city.Name;
+            txtCounty.Text = county.Name;
+            this.county = county;
+        }
+
+        private void btnNotify_Click(object sender, EventArgs e)
+        {
+            county.Capacity = (double)nudCapacity.Value;
         }
     }
 }
